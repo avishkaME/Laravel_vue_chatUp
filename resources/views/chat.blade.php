@@ -18,7 +18,7 @@
     <div class="container">
         <div class="row" id="app">
             <div class="offset-4 col-md-4">
-                <li class="list-group-item active">ChatUP <span class="badge badge-pill badge-danger">@{{ numberOfUsers }}</span></li>
+                <li class="list-group-item active">ChatUP <span class="badge badge-pill badge-danger">@{{ numberOfUsers }}</span><a href="" class="btn btn-outline-info btn-sm float-right" @click.prevent='deleteSession'>Delete</a></li>
                 <div class="badge badge-primary badge-pill"> @{{ typing }}</div>
                 <ul class="list-group" v-chat-scroll>
                     <message v-for="value,index in chat.message" :key="value.index" :color=chat.color[index] :user=chat.user[index] :time=chat.time[index]>
